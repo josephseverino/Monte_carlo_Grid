@@ -4,9 +4,14 @@
 </span>
 
 ### Small and Large Gamma and Epsilon
-<span style="font-family:Papyrus"> When I set Gamma values low (i.e gamma < .2), regardless of how large or small I set epsilon, I would get very quick convergence and get bad policies on the bottom of the grid world. Conversly, when I 
+<span style="font-family:Papyrus"> When I set Gamma values low (i.e gamma < .2), regardless of how large or small I set epsilon, I would get very quick convergence and get bad policies on the bottom of the grid world. Conversly, when I set gamma to be high (i.e. gamma = .9), I would get two different types of predictions depending on my epsilon value. For epsilon large, I would get poor policies for my agent and slower convergence. Alternatively, when I used smaller values of epsilon I would get quick convergence and optimal policies. 
 </span>
 
 <p align="center">
   <img src="monte_graph.png" )
 </p>
+
+## Conclusion
+
+<span style="font-family:Papyrus"> Monte Carlo Prediction is not nearly as quick as other models like value iteration or Policy iteration. However, it is still a useful tool for predicting given the appropriate values of epsilon and gammma. The reason the Monte Carlo Prediction converges so slowly is due to its episodic nature. Randomly sampling many state-action combinations requires a larger amount of exploration to understand the mean at those given state-action spaces. Thus, like the multi-arm bandit, it requires exhaustive exploration. However, the most important factor for Monte Carlo is setting the gamma and epsilon values so that good exploration to undstand the means at each state-action, thus getting the most accurate value function and ultimately choosing the right policy for the agent. 
+</span>
